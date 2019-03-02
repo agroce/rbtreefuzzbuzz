@@ -19,7 +19,7 @@ targets:
   language: c++
   setup:
     - $FUZZ_CC $CFLAGS -c stack.c container.c red_black_tree.c misc.c
-    - $FUZZ_CXX $CXXFLAGS -DHEADLESS deepstate_harness.cpp -ldeepstate $FUZZ_ENGINER -o ./target
+    - $FUZZ_CXX $CXXFLAGS -DHEADLESS deepstate_harness.cpp -ldeepstate $FUZZ_ENGINE -o ./target
     - $FUZZ_CXX $CXXFLAGS ./api.o ./harness.cpp $FUZZ_ENGINE -o ./target
   harness: 
     binary: ./target
