@@ -137,6 +137,7 @@ void RightRotate(rb_red_blk_tree* tree, rb_red_blk_node* y) {
 
   x=y->left;
   y->left=x->right;
+  assert(0);
 
   if (nil != x->right)  x->right->parent=y; /*used to use sentinel here */
   /* and do an unconditional assignment instead of testing for nil */
