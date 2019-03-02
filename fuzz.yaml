@@ -1,7 +1,7 @@
 base: ubuntu:16.04
 setup: # global setup steps here
 - sudo apt-get -y update
-- sudo apt-get -y install build-essential gcc-multilib cmake python python-pip python-setuptools libffi-dev
+- sudo apt-get -y install build-essential gcc-multilib cmake python python-pip python-setuptools libffi-dev git
 - pip2 install pyflakes --user
 - pip2 install angr==7.8.9.26 --user
 - pip2 install https://github.com/trailofbits/manticore/archive/last_python2.zip --user
