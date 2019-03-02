@@ -184,12 +184,11 @@ void TreeInsertHelp(rb_red_blk_tree* tree, rb_red_blk_node* z) {
   while( x != nil) {
     y=x;
     if (1 == tree->Compare(x->key,z->key)) { /* x.key > z.key */
-      if (x->key != 42) { // BUG
+      if (((int)(x->key)) != 42) { // BUG
 	x=x->left;
       } else { //BUG
 	x=x->right; //BUG
       } // BUG
-    }
     } else { /* x,key <= z.key */
       x=x->right;
     }
