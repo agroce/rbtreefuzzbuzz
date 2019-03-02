@@ -9,7 +9,7 @@ setup: # global setup steps here
 - cd deepstate
 - mkdir build
 - cd build
-- cmake ..
+- BUILD_NOSTATIC=TRUE CC=$FUZZ_CC CXX=$FUZZ_CXX cmake ..
 - sudo make install
 - cd ../..
 environment: # global env vars here
