@@ -5,11 +5,13 @@ setup: # global setup steps here
 - pip2 install pyflakes --user
 - pip2 install angr==7.8.9.26 --user
 - pip2 install https://github.com/trailofbits/manticore/archive/last_python2.zip --user
+- git clone https://github.com/trailofbits/deepstate.git
+- cd deepstate
 - mkdir build
 - cd build
 - cmake ..
 - sudo make install
-- cd ..
+- cd ../..
 environment: # global env vars here
 - LIBFUZZER_ABORT_ON_FAIL=TRUE
 targets:
