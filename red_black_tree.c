@@ -137,7 +137,6 @@ void RightRotate(rb_red_blk_tree* tree, rb_red_blk_node* y) {
 
   x=y->left;
   y->left=x->right;
-  assert(0);
 
   if (nil != x->right)  x->right->parent=y; /*used to use sentinel here */
   /* and do an unconditional assignment instead of testing for nil */
@@ -231,10 +230,6 @@ rb_red_blk_node * RBTreeInsert(rb_red_blk_tree* tree, void* key, void* info) {
   x=(rb_red_blk_node*) SafeMalloc(sizeof(rb_red_blk_node));
   x->key=key;
   x->info=info;
-
-  if (*((int*)key) == 123456) {
-    assert(0);
-  }
   
   TreeInsertHelp(tree,x);
   newNode=x;
