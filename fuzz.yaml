@@ -23,4 +23,4 @@ targets:
   harness: 
     binary: ./target
   sanitizers:
-  corpus: ./corpus
+  corpus: ./smallcorpus
