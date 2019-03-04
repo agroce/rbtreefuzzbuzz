@@ -9,7 +9,7 @@ setup: # global setup steps here
 - cd deepstate
 - mkdir build
 - cd build
-- BUILD_NOSTATIC=TRUE BUILD_NO32=TRUE cmake -DCMAKE_C_COMPILER=$FUZZ_CC -DCMAKE_CXX_COMPILER=$FUZZ_CXX -DCMAKE_C_FLAGS=$CFLAGS -DCMAKE_CXX_FLAGS=$CXXFLAGS ..
+- BUILD_NOSTATIC=TRUE BUILD_NO32=TRUE cmake -DCMAKE_C_COMPILER=$FUZZ_CC -DCMAKE_CXX_COMPILER=$FUZZ_CXX -DCMAKE_C_FLAGS="$CFLAGS" -DCMAKE_CXX_FLAGS="$CXXFLAGS" ..
 - sudo make install
 - cd ../..
 environment: # global env vars here
